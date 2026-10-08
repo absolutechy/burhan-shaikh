@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI/UX Designer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top"><span>BS</span> Portfolio</a>
+      <nav class="links" id="links">
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">◐</button>
+        <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="pill"><span></span> Available for selected design work</p>
+          <h1><span class="hero-intro">Hi, I am</span> Burhan Shaikh</h1>
+          <p class="hero-statement"><span id="typedPhrase" class="typed-name" aria-live="polite"></span></p>
+          <p class="lead">A UI/UX portfolio for mobile apps, dashboards, product websites, and design systems. Explore selected work, process, and visual direction.</p>
+          <div class="cta">
+            <a class="btn primary" href="#work">View Work</a>
+            <a class="btn ghost" href="mailto:hello@example.com" data-contact-email-link>Email Designer</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/image/hero.png" alt="Responsive ecommerce UI design shown across laptop, tablet, and phone screens">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Works</p>
+            <h2>Top Projects</h2>
+          </div>
+          <div class="filters" id="filters"></div>
+        </div>
+        <div class="status" id="projectStatus">Loading projects...</div>
+        <div class="project-grid" id="projects"></div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="wrap">
+        <p class="eyebrow">Process</p>
+        <h2>From fuzzy idea to polished interface.</h2>
+        <div class="process-grid">
+          <article>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m21 21-4.3-4.3m2.3-5.2a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+            </span>
+            <b>01</b>
+            <h3>Discover</h3>
+            <p>Clarify users, goals, constraints, and the core product story before pushing pixels.</p>
+          </article>
+          <article>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v5m0 0H8v5h8V8h-4Zm-7 8v5m0-5h5m-5 5h5m9-5v5m0-5h-5m5 5h-5"/></svg>
+            </span>
+            <b>02</b>
+            <h3>Structure</h3>
+            <p>Map flows, wireframes, content hierarchy, and reusable UI patterns.</p>
+          </article>
+          <article>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m4 20 4.4-1 10-10a2.8 2.8 0 0 0-4-4l-10 10L4 20Zm10.5-14.5 4 4"/></svg>
+            </span>
+            <b>03</b>
+            <h3>Design</h3>
+            <p>Create responsive screens, interaction states, prototypes, and handoff-ready assets.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="wrap">
+        <div class="skills-head">
+          <p class="eyebrow">Skills</p>
+          <h2>Practical design <span>strengths.</span></h2>
+          <p>A balanced mix of design, product thinking and collaboration skills to turn ideas into intuitive, real-world experiences.</p>
+        </div>
+        <div class="skill-list" aria-label="Design skills">
+          <article class="skill-tile" style="--c1:#8758ff;--c2:#6336df;--r:-7deg;--y:0px">
+            <span class="skill-icon"><svg viewBox="0 0 24 24"><path d="m4 20 4.4-1 10-10a2.8 2.8 0 0 0-4-4l-10 10L4 20Zm10.5-14.5 4 4"/></svg></span>
+            <strong>UI Design</strong><i>›</i>
+          </article>
+          <article class="skill-tile" style="--c1:#7bd0ff;--c2:#3c8df6;--r:7deg;--y:26px">
+            <span class="skill-icon"><svg viewBox="0 0 24 24"><path d="M12 4v4m0 8v4M8 8h8v8H8V8Zm-4 4h4m8 0h4"/></svg></span>
+            <strong>UX Flows</strong><i>›</i>
+          </article>
+          <article class="skill-tile" style="--c1:#f184ef;--c2:#be4be4;--r:-6deg;--y:8px">
+            <span class="skill-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4V5Zm0 0 16 14M20 5 4 19"/></svg></span>
+            <strong>Wireframes</strong><i>›</i>
+          </article>
+          <article class="skill-tile" style="--c1:#72eadc;--c2:#44b7f7;--r:7deg;--y:20px">
+            <span class="skill-icon"><svg viewBox="0 0 24 24"><path d="M5 20h14V4H5v16Zm4-3V9m3 8V6m3 11v-5"/></svg></span>
+            <strong>Dashboards</strong><i>›</i>
+          </article>
+          <article class="skill-tile" style="--c1:#ffc18b;--c2:#ff8c73;--r:6deg;--y:6px">
+            <span class="skill-icon"><svg viewBox="0 0 24 24"><path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm3 15h2"/></svg></span>
+            <strong>Mobile Apps</strong><i>›</i>
+          </article>
+          <article class="skill-tile" style="--c1:#935dff;--c2:#5c45ea;--r:-4deg;--y:30px">
+            <span class="skill-icon"><svg viewBox="0 0 24 24"><path d="m12 3 8 4-8 4-8-4 8-4Zm-8 8 8 4 8-4M4 15l8 4 8-4"/></svg></span>
+            <strong>Design Systems</strong><i>›</i>
+          </article>
+          <article class="skill-tile" style="--c1:#5cd7f2;--c2:#25aad4;--r:6deg;--y:14px">
+            <span class="skill-icon"><svg viewBox="0 0 24 24"><path d="m21 4-8 16-3-7-7-3 18-6Z"/></svg></span>
+            <strong>Prototyping</strong><i>›</i>
+          </article>
+          <article class="skill-tile" style="--c1:#f477de;--c2:#c658e8;--r:-8deg;--y:28px">
+            <span class="skill-icon"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-2-10-4 16"/></svg></span>
+            <strong>Developer Handoff</strong><i>›</i>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="contact-footer" id="contact">
+    <div class="wrap footer-grid">
+      <section class="footer-copy">
+        <p class="footer-kicker"><span></span> Contact</p>
+        <h2>Let’s build your next <span>digital experience</span></h2>
+        <p>I’m always open to discussing new opportunities, interesting UI/UX challenges, product design work, or just a friendly chat about ideas. Let’s create something amazing together.</p>
+        <div class="footer-status">
+          <span><i>↯</i> Available for freelance</span>
+          <span><i>●</i> Open to remote</span>
+          <span><i>●</i> Quick response</span>
+        </div>
+      </section>
+
+      <section class="footer-actions" aria-label="Contact actions">
+        <a class="email-card" href="mailto:hello@example.com" data-contact-email-link>
+          <span class="action-icon">✉</span>
+          <span><small>Send an email</small><strong data-contact-email>hello@example.com</strong></span>
+          <i>→</i>
+        </a>
+        <div class="social-grid">
+          <a href="https://wa.me/923188895244" aria-label="WhatsApp" data-contact-whatsapp-link><span class="wa-mark">☎</span><b>WhatsApp</b> <i>›</i></a>
+          <a href="#" aria-label="LinkedIn" data-contact-linkedin><span>in</span>LinkedIn <i>›</i></a>
+          <a href="#" aria-label="Dribbble" data-contact-dribbble><span>dr</span>Dribbble <i>›</i></a>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <p>© 2026 BS Portfolio. All rights reserved.</p>
+      <nav aria-label="Footer links">
+        <a href="#" data-contact-dribbble>Dribbble</a>
+        <a href="#" data-contact-linkedin>LinkedIn</a>
+      </nav>
+      <span class="availability"><i></i> Available for freelance</span>
+    </div>
+  </footer>
+
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close project">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

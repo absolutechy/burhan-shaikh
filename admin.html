@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <section class="admin-card" id="loginView">
+      <p class="eyebrow">Admin Login</p>
+      <h1>Manage portfolio projects.</h1>
+      <p class="muted">Sign in with the Supabase user created for the designer.</p>
+      <form id="loginForm" class="stack-form">
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Password<input type="password" name="password" required autocomplete="current-password"></label>
+        <button class="btn primary" type="submit">Sign In</button>
+      </form>
+      <p class="form-message" id="loginMessage"></p>
+    </section>
+
+    <section class="admin-app hidden" id="adminView">
+      <aside class="admin-sidebar">
+        <div>
+          <p class="eyebrow">Portfolio CMS</p>
+          <h1>Projects</h1>
+        </div>
+        <button class="btn primary" id="newProject" type="button">New Project</button>
+        <div class="admin-list" id="projectList"></div>
+        <button class="btn ghost" id="logoutBtn" type="button">Log Out</button>
+      </aside>
+
+      <section class="admin-editor">
+        <div class="editor-head">
+          <div>
+            <p class="eyebrow">Project Editor</p>
+            <h2 id="editorTitle">Create a project</h2>
+          </div>
+          <p class="form-message" id="saveMessage"></p>
+        </div>
+
+        <section class="settings-panel">
+          <div class="editor-head">
+            <div>
+              <p class="eyebrow">Contact Settings</p>
+              <h2>Footer and CTA links</h2>
+            </div>
+            <p class="form-message" id="settingsMessage"></p>
+          </div>
+          <form id="settingsForm" class="project-form">
+            <div class="form-grid">
+              <label>Email<input type="email" name="email" placeholder="hello@example.com"></label>
+              <label>Phone / WhatsApp<input name="phone" placeholder="+92 318 8895244"></label>
+              <label>LinkedIn URL<input name="linkedin_url" placeholder="Optional"></label>
+              <label>Dribbble URL<input name="dribbble_url" placeholder="Optional"></label>
+            </div>
+            <button class="btn ghost" type="submit">Save Contact Settings</button>
+          </form>
+        </section>
+
+        <form id="projectForm" class="project-form">
+          <input type="hidden" name="id">
+          <div class="form-grid">
+            <label>Title<input name="title" required></label>
+            <label>Slug<input name="slug" placeholder="mobile-banking-app"></label>
+            <label>Role<input name="role" placeholder="UI/UX Designer"></label>
+            <label>Platform<input name="platform" placeholder="Web, iOS, Android"></label>
+            <label>Focus<input name="focus" placeholder="Dashboard UX"></label>
+            <label>Duration<input name="duration" placeholder="4 weeks"></label>
+            <label>Tags<input name="tags" placeholder="mobile, dashboard, fintech"></label>
+            <label>Tools Used<input name="tools" placeholder="Figma, FigJam, Photoshop"></label>
+            <label>Palette<input name="palette" placeholder="#6c4cf1, #12c5ad"></label>
+            <label>Sort Order<input type="number" name="sort_order" value="0"></label>
+            <label class="check-row"><input type="checkbox" name="published"> Published</label>
+          </div>
+          <label>Short Summary<textarea name="summary" rows="3" required></textarea></label>
+          <label>Full Description<textarea name="description" rows="5"></textarea></label>
+          <div class="editor-actions">
+            <button class="btn primary" type="submit">Save Project</button>
+            <button class="btn danger" id="deleteProject" type="button">Delete</button>
+          </div>
+        </form>
+
+        <section class="image-manager">
+          <div class="editor-head">
+            <div>
+              <p class="eyebrow">Images</p>
+              <h2>Gallery uploads</h2>
+            </div>
+          </div>
+          <form id="imageForm" class="image-form">
+            <input type="file" name="image" accept="image/*" required>
+            <input name="alt" placeholder="Alt text">
+            <input name="caption" placeholder="Caption">
+            <button class="btn ghost" type="submit">Upload Image</button>
+          </form>
+          <div class="image-grid" id="imageList"></div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
