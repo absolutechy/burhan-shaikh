@@ -11,6 +11,7 @@
   --shadow: 0 30px 70px -35px rgba(40, 30, 110, .45);
   --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --portfolio-image-ratio: 1366 / 786;
 }
 
 :root[data-theme="dark"] {
@@ -495,8 +496,9 @@ h3 {
 
 .project-showcase {
   position: relative;
-  height: clamp(340px, 32vw, 430px);
-  aspect-ratio: 1.45;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: var(--portfolio-image-ratio);
   overflow: hidden;
   border: 1px solid rgba(108, 76, 241, .14);
   border-radius: 32px;
@@ -525,8 +527,7 @@ h3 {
   width: 100%;
   height: 100%;
   max-height: 100%;
-  object-fit: cover;
-  transition: transform .35s;
+  object-fit: contain;
 }
 
 .project-row.slide-animating .project-cover img,
@@ -546,10 +547,6 @@ h3 {
     transform: translateX(0) scale(1);
     filter: blur(0);
   }
-}
-
-.project-cover:hover img {
-  transform: scale(1.04);
 }
 
 .project-cover span {
@@ -579,7 +576,7 @@ h3 {
 }
 
 .project-body h3 {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: 44px;
 }
 
 .project-body p {
@@ -1351,8 +1348,9 @@ h3 {
 .carousel-stage {
   position: relative;
   display: grid;
-  height: clamp(320px, 46vh, 460px);
-  aspect-ratio: 1.45;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: var(--portfolio-image-ratio);
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
@@ -1363,7 +1361,7 @@ h3 {
   width: 100%;
   height: 100%;
   max-height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .carousel-stage > span {
@@ -1439,9 +1437,9 @@ h3 {
 
 .carousel-thumbs img {
   width: 100%;
-  height: 74px;
-  aspect-ratio: 1.35;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: var(--portfolio-image-ratio);
+  object-fit: contain;
 }
 
 .modal-details {
@@ -1749,11 +1747,6 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  .carousel-stage,
-  .carousel-stage img {
-    height: 320px;
-  }
-
   .modal-details .case-facts {
     grid-template-columns: 1fr;
   }
@@ -1786,11 +1779,6 @@ textarea:focus {
   .project-row.flip .project-body,
   .project-row.flip .project-showcase {
     order: initial;
-  }
-
-  .project-showcase,
-  .project-cover {
-    height: 340px;
   }
 
   .section-head,
@@ -1843,17 +1831,12 @@ textarea:focus {
     border-radius: 24px;
   }
 
-  .project-body h3 {
-    font-size: 2.75rem;
-  }
-
   .project-body p {
     font-size: 1rem;
   }
 
   .project-showcase,
   .project-cover {
-    height: 250px;
     border-radius: 22px;
   }
 
@@ -1948,11 +1931,6 @@ textarea:focus {
 
   .project-modal-layout {
     gap: 22px;
-  }
-
-  .carousel-stage,
-  .carousel-stage img {
-    height: 250px;
   }
 
   .carousel-thumbs {

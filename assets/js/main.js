@@ -113,11 +113,13 @@
       const tools = projectTools(project).slice(0, 5);
       const imageCount = (project.images || []).length;
       const slideIndex = state.projectSlides[project.id] || 0;
+      const summaryWords = String(project.summary || "").trim().split(/\s+/);
+      const cardSummary = summaryWords.slice(0, 20).join(" ") + (summaryWords.length > 20 ? "…" : "");
       return `<article class="project-row ${index % 2 ? "flip" : ""} ${state.animatingProject === project.id ? "slide-animating" : ""}" data-project-row="${project.id}">
         <div class="project-body">
           <div class="project-meta"><span>${esc(project.platform)}</span><span>${esc(project.focus)}</span></div>
           <h3>${esc(project.title)}</h3>
-          <p>${esc(project.summary)}</p>
+          <p>${esc(cardSummary)}</p>
           <div class="project-tools">
             <strong>Tools used</strong>
             <div>${tools.map((tool) => `<span>${esc(tool)}</span>`).join("") || "<span>Case study</span>"}</div>
